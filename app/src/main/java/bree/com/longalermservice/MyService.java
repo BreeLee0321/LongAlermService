@@ -57,5 +57,7 @@ public class MyService extends Service {
     @Override
     public void onDestroy() {
         super.onDestroy();
+        Log.d("MyService", "onDestroy");
+        startActivity(new Intent(getApplicationContext(),MyService.class));
     }
 }
